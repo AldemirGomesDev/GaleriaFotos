@@ -1,0 +1,161 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="br.com.aldemir.galeria"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="36" />
+10
+11    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+11-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:4:5-76
+11-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:4:22-73
+12    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+12-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:5:5-75
+12-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:5:22-72
+13    <uses-permission
+13-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:6:5-8:38
+14        android:name="android.permission.READ_EXTERNAL_STORAGE"
+14-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:7:9-64
+15        android:maxSdkVersion="32" />
+15-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:8:9-35
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[androidx.media3:media3-exoplayer:1.6.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/2df9e44d914f35ae4042882c4a5eb408/transformed/media3-exoplayer-1.6.1/AndroidManifest.xml:22:5-79
+16-->[androidx.media3:media3-exoplayer:1.6.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/2df9e44d914f35ae4042882c4a5eb408/transformed/media3-exoplayer-1.6.1/AndroidManifest.xml:22:22-76
+17
+18    <permission
+18-->[androidx.core:core:1.17.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/ade745a0ade6f35c774e71f7725054a4/transformed/core-1.17.0/AndroidManifest.xml:22:5-24:47
+19        android:name="br.com.aldemir.galeria.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+19-->[androidx.core:core:1.17.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/ade745a0ade6f35c774e71f7725054a4/transformed/core-1.17.0/AndroidManifest.xml:23:9-81
+20        android:protectionLevel="signature" />
+20-->[androidx.core:core:1.17.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/ade745a0ade6f35c774e71f7725054a4/transformed/core-1.17.0/AndroidManifest.xml:24:9-44
+21
+22    <uses-permission android:name="br.com.aldemir.galeria.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+22-->[androidx.core:core:1.17.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/ade745a0ade6f35c774e71f7725054a4/transformed/core-1.17.0/AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.17.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/ade745a0ade6f35c774e71f7725054a4/transformed/core-1.17.0/AndroidManifest.xml:26:22-94
+23
+24    <application
+24-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:10:5-25:19
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.17.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/ade745a0ade6f35c774e71f7725054a4/transformed/core-1.17.0/AndroidManifest.xml:28:18-86
+26        android:debuggable="true"
+27        android:extractNativeLibs="false"
+28        android:icon="@mipmap/ic_launcher"
+28-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:12:9-43
+29        android:label="@string/app_name"
+29-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:11:9-41
+30        android:roundIcon="@mipmap/ic_launcher"
+30-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:13:9-48
+31        android:supportsRtl="true"
+31-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:14:9-35
+32        android:testOnly="true"
+33        android:theme="@style/Theme.Galeria" >
+33-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:15:9-45
+34        <activity
+34-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:16:9-24:20
+35            android:name="br.com.aldemir.galeria.MainActivity"
+35-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:17:13-41
+36            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+36-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:18:13-94
+37            android:exported="true" >
+37-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:19:13-36
+38            <intent-filter>
+38-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:20:13-23:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:21:17-69
+39-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:21:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:22:17-77
+41-->/Users/aldemir.silva/Workspace/KMP/galeria-fotos/composeApp/src/androidMain/AndroidManifest.xml:22:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <provider
+45-->[org.jetbrains.compose.components:components-resources-android:1.8.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/9d1334f849768dc71792b61854601187/transformed/library-release/AndroidManifest.xml:8:9-13:20
+46            android:name="org.jetbrains.compose.resources.AndroidContextProvider"
+46-->[org.jetbrains.compose.components:components-resources-android:1.8.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/9d1334f849768dc71792b61854601187/transformed/library-release/AndroidManifest.xml:9:13-82
+47            android:authorities="br.com.aldemir.galeria.resources.AndroidContextProvider"
+47-->[org.jetbrains.compose.components:components-resources-android:1.8.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/9d1334f849768dc71792b61854601187/transformed/library-release/AndroidManifest.xml:10:13-84
+48            android:enabled="true"
+48-->[org.jetbrains.compose.components:components-resources-android:1.8.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/9d1334f849768dc71792b61854601187/transformed/library-release/AndroidManifest.xml:11:13-35
+49            android:exported="false" >
+49-->[org.jetbrains.compose.components:components-resources-android:1.8.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/9d1334f849768dc71792b61854601187/transformed/library-release/AndroidManifest.xml:12:13-37
+50        </provider>
+51
+52        <activity
+52-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/a57863130155d6decb733931da6bfe42/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+53            android:name="androidx.compose.ui.tooling.PreviewActivity"
+53-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/a57863130155d6decb733931da6bfe42/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+54            android:exported="true" />
+54-->[androidx.compose.ui:ui-tooling-android:1.8.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/a57863130155d6decb733931da6bfe42/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+55
+56        <provider
+56-->[androidx.emoji2:emoji2:1.4.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/aa282f2398a42b0d842db7391683248a/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+57            android:name="androidx.startup.InitializationProvider"
+57-->[androidx.emoji2:emoji2:1.4.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/aa282f2398a42b0d842db7391683248a/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+58            android:authorities="br.com.aldemir.galeria.androidx-startup"
+58-->[androidx.emoji2:emoji2:1.4.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/aa282f2398a42b0d842db7391683248a/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+59            android:exported="false" >
+59-->[androidx.emoji2:emoji2:1.4.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/aa282f2398a42b0d842db7391683248a/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+60            <meta-data
+60-->[androidx.emoji2:emoji2:1.4.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/aa282f2398a42b0d842db7391683248a/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+61                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+61-->[androidx.emoji2:emoji2:1.4.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/aa282f2398a42b0d842db7391683248a/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+62                android:value="androidx.startup" />
+62-->[androidx.emoji2:emoji2:1.4.0] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/aa282f2398a42b0d842db7391683248a/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+63            <meta-data
+63-->[androidx.lifecycle:lifecycle-process:2.9.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/7899ce5c44b809c32490aa53120b0b71/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:29:13-31:52
+64                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+64-->[androidx.lifecycle:lifecycle-process:2.9.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/7899ce5c44b809c32490aa53120b0b71/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:30:17-78
+65                android:value="androidx.startup" />
+65-->[androidx.lifecycle:lifecycle-process:2.9.2] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/7899ce5c44b809c32490aa53120b0b71/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:31:17-49
+66            <meta-data
+66-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:29:13-31:52
+67                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+67-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:30:17-85
+68                android:value="androidx.startup" />
+68-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:31:17-49
+69        </provider>
+70
+71        <receiver
+71-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:34:9-52:20
+72            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+72-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:35:13-76
+73            android:directBootAware="false"
+73-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:36:13-44
+74            android:enabled="true"
+74-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:37:13-35
+75            android:exported="true"
+75-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:38:13-36
+76            android:permission="android.permission.DUMP" >
+76-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:39:13-57
+77            <intent-filter>
+77-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:40:13-42:29
+78                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+78-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:41:17-91
+78-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:41:25-88
+79            </intent-filter>
+80            <intent-filter>
+80-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:43:13-45:29
+81                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+81-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:44:17-85
+81-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:44:25-82
+82            </intent-filter>
+83            <intent-filter>
+83-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:46:13-48:29
+84                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+84-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:47:17-88
+84-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:47:25-85
+85            </intent-filter>
+86            <intent-filter>
+86-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:49:13-51:29
+87                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+87-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:50:17-95
+87-->[androidx.profileinstaller:profileinstaller:1.4.1] /Users/aldemir.silva/.gradle/caches/8.14.3/transforms/6f8d9159f298ff77173979a0e041d82d/transformed/profileinstaller-1.4.1/AndroidManifest.xml:50:25-92
+88            </intent-filter>
+89        </receiver>
+90    </application>
+91
+92</manifest>

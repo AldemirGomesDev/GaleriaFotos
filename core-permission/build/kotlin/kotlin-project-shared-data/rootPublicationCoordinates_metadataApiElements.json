@@ -1,0 +1,8 @@
+{
+  "buildPath": ":",
+  "projectPath": ":core-permission",
+  "moduleId": {
+    "groupId": "GaleriaFotos",
+    "moduleId": "core-permission"
+  }
+}
