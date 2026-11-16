@@ -46,7 +46,7 @@ internal class AndroidGalleryRepository(
         val media = mutableListOf<Photo>()
         media += queryCollection(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, isVideo = false)
         media += queryCollection(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, isVideo = true)
-        // Do mais recente para o mais antigo; itens sem DATE_TAKEN ficam por último.
+        // Do mais recente para o mais antigo, pela data efetiva (captura ou modificação).
         media.sortedWith(compareByDescending { it.dateTaken ?: Long.MIN_VALUE })
     }
 
@@ -55,6 +55,7 @@ internal class AndroidGalleryRepository(
             MediaStore.MediaColumns._ID,
             MediaStore.MediaColumns.DISPLAY_NAME,
             MediaStore.MediaColumns.DATE_TAKEN,
+            MediaStore.MediaColumns.DATE_MODIFIED,
             MediaStore.MediaColumns.SIZE,
             MediaStore.MediaColumns.WIDTH,
             MediaStore.MediaColumns.HEIGHT,
@@ -69,6 +70,7 @@ internal class AndroidGalleryRepository(
             val idCol = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns._ID)
             val nameCol = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DISPLAY_NAME)
             val dateCol = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATE_TAKEN)
+            val dateModifiedCol = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATE_MODIFIED)
             val sizeCol = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.SIZE)
             val widthCol = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.WIDTH)
             val heightCol = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.HEIGHT)
@@ -79,7 +81,10 @@ internal class AndroidGalleryRepository(
                     id = if (isVideo) "video:$rawId" else "image:$rawId",
                     uri = ContentUris.withAppendedId(collection, rawId).toString(),
                     name = cursor.getString(nameCol) ?: rawId.toString(),
-                    dateTaken = cursor.getLong(dateCol),
+                    dateTaken = maxOf(
+                        cursor.getLong(dateCol),
+                        cursor.getLong(dateModifiedCol) * 1000L,
+                    ),
                     sizeBytes = cursor.getLong(sizeCol),
                     width = cursor.getInt(widthCol),
                     height = cursor.getInt(heightCol),

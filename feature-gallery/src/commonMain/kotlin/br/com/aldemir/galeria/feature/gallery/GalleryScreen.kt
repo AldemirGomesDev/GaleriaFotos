@@ -13,10 +13,15 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
@@ -24,7 +29,10 @@ import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TooltipBox
+import androidx.compose.material3.TooltipDefaults
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -87,19 +95,31 @@ fun GalleryScreen(
                     },
                     actions = {
                         if (selectionMode) {
-                            TextButton(onClick = onShareSelected) {
-                                Text("Compartilhar")
-                            }
-                            TextButton(
-                                onClick = {
-                                    if (hasSystemDeleteConfirmation()) {
-                                        onDeleteSelected()
-                                    } else {
-                                        showDeleteDialog = true
-                                    }
-                                },
+                            TooltipBox(
+                                positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(),
+                                tooltip = { Text("Compartilhar") },
+                                state = rememberTooltipState(),
                             ) {
-                                Text("Excluir")
+                                IconButton(onClick = onShareSelected) {
+                                    Icon(Icons.Filled.Share, contentDescription = "Compartilhar")
+                                }
+                            }
+                            TooltipBox(
+                                positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(),
+                                tooltip = { Text("Excluir") },
+                                state = rememberTooltipState(),
+                            ) {
+                                IconButton(
+                                    onClick = {
+                                        if (hasSystemDeleteConfirmation()) {
+                                            onDeleteSelected()
+                                        } else {
+                                            showDeleteDialog = true
+                                        }
+                                    },
+                                ) {
+                                    Icon(Icons.Filled.Delete, contentDescription = "Excluir")
+                                }
                             }
                         }
                     },
@@ -109,12 +129,12 @@ fun GalleryScreen(
                         Tab(
                             selected = uiState.activeTab == GalleryTab.All,
                             onClick = { onSelectTab(GalleryTab.All) },
-                            text = { Text("Todas") },
+                            text = { Text("Todas (${uiState.photos.size})") },
                         )
                         Tab(
                             selected = uiState.activeTab == GalleryTab.Favorites,
                             onClick = { onSelectTab(GalleryTab.Favorites) },
-                            text = { Text("Favoritas") },
+                            text = { Text("Favoritas (${uiState.photos.count { it.isFavorite }})") },
                         )
                     }
                 }

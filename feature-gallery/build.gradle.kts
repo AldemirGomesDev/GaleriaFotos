@@ -29,6 +29,7 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
             implementation(compose.ui)
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
@@ -42,7 +43,6 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.media3.exoplayer)
             implementation(libs.media3.ui)
-            implementation(compose.materialIconsExtended)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

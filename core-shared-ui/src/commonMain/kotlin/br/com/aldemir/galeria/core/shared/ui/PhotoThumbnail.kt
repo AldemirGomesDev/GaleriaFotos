@@ -12,6 +12,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -127,10 +131,11 @@ fun PhotoThumbnail(
                     .clickable { onToggleFavorite() },
                 contentAlignment = Alignment.Center,
             ) {
-                Text(
-                    text = if (photo.isFavorite) "♥" else "♡",
-                    color = if (photo.isFavorite) Color(0xFFE53935) else Color.White,
-                    fontSize = 16.sp,
+                Icon(
+                    imageVector = if (photo.isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                    contentDescription = if (photo.isFavorite) "Remover dos favoritos" else "Adicionar aos favoritos",
+                    tint = if (photo.isFavorite) Color(0xFFE53935) else Color.White,
+                    modifier = Modifier.size(16.dp),
                 )
             }
         }
