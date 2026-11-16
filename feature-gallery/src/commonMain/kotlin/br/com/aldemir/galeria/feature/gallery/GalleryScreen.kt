@@ -109,12 +109,12 @@ fun GalleryScreen(
                         Tab(
                             selected = uiState.activeTab == GalleryTab.All,
                             onClick = { onSelectTab(GalleryTab.All) },
-                            text = { Text("Todas") },
+                            text = { Text("Todas (${uiState.photos.size})") },
                         )
                         Tab(
                             selected = uiState.activeTab == GalleryTab.Favorites,
                             onClick = { onSelectTab(GalleryTab.Favorites) },
-                            text = { Text("Favoritas") },
+                            text = { Text("Favoritas (${uiState.photos.count { it.isFavorite }})") },
                         )
                     }
                 }
