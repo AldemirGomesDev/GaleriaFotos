@@ -13,8 +13,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -22,7 +24,10 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TooltipBox
+import androidx.compose.material3.TooltipDefaults
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -99,19 +104,39 @@ fun PhotoViewerScreen(
                             },
                         )
                     }
-                    TextButton(onClick = { onShare(photos[pagerState.currentPage]) }) {
-                        Text("Compartilhar")
-                    }
-                    TextButton(
-                        onClick = {
-                            if (hasSystemDeleteConfirmation()) {
-                                onDelete(photos[pagerState.currentPage])
-                            } else {
-                                showDeleteDialog = true
-                            }
-                        },
+                    TooltipBox(
+                        positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(),
+                        tooltip = { Text("Compartilhar") },
+                        state = rememberTooltipState(),
                     ) {
-                        Text("Excluir")
+                        IconButton(onClick = { onShare(photos[pagerState.currentPage]) }) {
+                            Icon(
+                                imageVector = Icons.Filled.Share,
+                                contentDescription = "Compartilhar",
+                                tint = Color.White,
+                            )
+                        }
+                    }
+                    TooltipBox(
+                        positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(),
+                        tooltip = { Text("Excluir") },
+                        state = rememberTooltipState(),
+                    ) {
+                        IconButton(
+                            onClick = {
+                                if (hasSystemDeleteConfirmation()) {
+                                    onDelete(photos[pagerState.currentPage])
+                                } else {
+                                    showDeleteDialog = true
+                                }
+                            },
+                        ) {
+                            Icon(
+                                imageVector = Icons.Filled.Delete,
+                                contentDescription = "Excluir",
+                                tint = Color.White,
+                            )
+                        }
                     }
                 },
             )
